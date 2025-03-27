@@ -1,10 +1,9 @@
 [project]
-name = "pixi-cuda-environment"
+name = "pixi-cuda"
 version = "0.1.0"
-description = "Add a short description here"
-authors = [{name = "Eric Ma", email = "ericmajinglong@gmail.com"}]
+description = "pixi cuda env"
 requires-python = ">= 3.11"
-dependencies = ["pandas", "numpy"]
+dependencies = ["pandas", "numpy", "jupyterhub", "notebook"]
 
 [build-system]
 requires = ["setuptools"]
@@ -18,14 +17,6 @@ platforms = ["osx-arm64", "linux-64"]
 pixi-cuda-environment = { path = ".", editable = true }
 jax = { version = "*" }
 
-[tool.pixi.tasks]
-test = "pytest"
-
-[tool.pixi.dependencies]
-ruff = ">=0.5.5,<0.6"
-pytest = ">=8.3.2,<8.4"
-ipython = ">=8.26.0,<9"
-pytest-cov = ">=5.0.0,<6"
 
 # Feature Definitions
 [tool.pixi.feature.cuda]
