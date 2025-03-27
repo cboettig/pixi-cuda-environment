@@ -1,5 +1,5 @@
 [project]
-name = "pixi-cuda"
+name = "pixi-cuda-environment"
 version = "0.1.0"
 description = "pixi cuda env"
 requires-python = ">= 3.11"
