@@ -3,7 +3,7 @@ name = "pixi-cuda-environment"
 version = "0.1.0"
 description = "pixi cuda env"
 requires-python = ">= 3.11"
-dependencies = ["pandas", "numpy", "jupyterhub", "notebook"]
+dependencies = ["pandas", "numpy", "jupyterhub>=4", "notebook"]
 
 [build-system]
 requires = ["setuptools"]
