@@ -8,7 +8,7 @@ COPY pyproject.toml /repo/pyproject.toml
 
 RUN /usr/local/bin/pixi install --manifest-path pyproject.toml --environment cuda
 
-USER jovyan
+
 # Entrypoint shell script ensures that any commands we run start with `pixi shell`,
 # which in turn ensures that we have the environment activated
 # when running any commands.
@@ -16,5 +16,5 @@ COPY entrypoint.sh /repo/entrypoint.sh
 RUN chmod 700 /repo/entrypoint.sh
 ENTRYPOINT [ "/repo/entrypoint.sh" ]
 
-
+USER jovyan
 CMD ["jupyter", "lab", "--ip", "0.0.0.0"]
